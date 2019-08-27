@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.ExamServer.dao.ExamGroupMapper">
+  <resultMap id="BaseResultMap" type="com.example.ExamServer.model.ExamGroup">
+    <result column="exam_id" jdbcType="INTEGER" property="examId" />
+    <result column="group_id" jdbcType="INTEGER" property="groupId" />
+  </resultMap>
+  <insert id="insert" parameterType="com.example.ExamServer.model.ExamGroup">
+    insert into exam_group (exam_id, group_id)
+    values (#{examId,jdbcType=INTEGER}, #{groupId,jdbcType=INTEGER})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select exam_id, group_id
+    from exam_group
+  </select>
+</mapper>
