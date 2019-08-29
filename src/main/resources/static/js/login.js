@@ -52,7 +52,7 @@ $(function(){
         };
 
         $.ajax({
-            url: "/user",
+            url: "/userinfo",
             type: "GET",
             traditional: true,
             contentType: "application/x-www-form-urlencoded; charset=UTF-8",
