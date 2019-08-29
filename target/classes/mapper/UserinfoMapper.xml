@@ -25,7 +25,7 @@
     where id = #{id,jdbcType=INTEGER}
   </select>
   <select id="selectAll" resultMap="BaseResultMap">
-    select id, user_name, `password`, user_typeexample.ExamServer
+    select id, user_name, `password`, user_type
     from userinfo
   </select>
 
@@ -44,5 +44,8 @@
     where user_name = #{username,jdbcType=VARCHAR}
   </select>
 
+  <update id="alterUserinfoable">
+    ALTER TABLE userinfo AUTO_INCREMENT =1
+  </update>
 
 </mapper>

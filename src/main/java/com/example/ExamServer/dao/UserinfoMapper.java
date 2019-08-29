@@ -17,7 +17,11 @@ public interface UserinfoMapper {
 
     int updateByPrimaryKey(Userinfo record);
 
-
+    /**
+     * 设置数据库自增长
+     * @return
+     */
+    int alterUserinfoable();
     /**
      * 添加单个用户
      * @param record
