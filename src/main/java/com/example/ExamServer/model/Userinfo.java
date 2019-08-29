@@ -1,7 +1,10 @@
 package com.example.ExamServer.model;
 
+import lombok.Data;
+
 import java.io.Serializable;
 
+@Data
 public class Userinfo implements Serializable {
     private Integer id;
 

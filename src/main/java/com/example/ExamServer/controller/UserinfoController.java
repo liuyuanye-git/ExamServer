@@ -4,10 +4,10 @@ import com.example.ExamServer.model.Userinfo;
 import com.example.ExamServer.model.entity.ResponseEntity;
 import com.example.ExamServer.service.IUserinfoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.boot.configurationprocessor.json.JSONObject;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
 
 /**
  * Created by twinkleStar on 2019/8/26.
@@ -44,13 +44,13 @@ public class UserinfoController {
 
     /**
      * 用户登陆
-     * @param username
-     * @param password
+  //   * @param username
+  //   * @param password
      * @return
      */
-    @GetMapping
-    public ResponseEntity userLogin(String username,String password) {
-        ResponseEntity responseEntity=iUserinfoService.selectUser(username,password);
+    @PostMapping("/login")
+    public ResponseEntity userLogin(@RequestBody Map<String,String> data) {
+        ResponseEntity responseEntity=iUserinfoService.selectUser(data.get("username"),data.get("password"));
         return responseEntity;
     }
 
