@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="273e838a-4f8a-4ff3-a55e-5c52df0e45e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ExamServer/controller/ExamInfoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ExamServer/service/IExaminfoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ExamServer/service/Impl/ExaminfoServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ExamServer/controller/ExamInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ExamServer/controller/ExaminfoController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +69,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1PpVjvqwfXIxNoaF51H8N8uqrTX" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
@@ -180,7 +184,7 @@
       <workItem from="1566977539439" duration="537000" />
       <workItem from="1567048513379" duration="4697000" />
       <workItem from="1567069688479" duration="421000" />
-      <workItem from="1567392907169" duration="3472000" />
+      <workItem from="1567392907169" duration="5271000" />
     </task>
     <servers />
   </component>
