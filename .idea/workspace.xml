@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="273e838a-4f8a-4ff3-a55e-5c52df0e45e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a3780ce2-a84f-4361-8120-8727f8d2a685.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a3780ce2-a84f-4361-8120-8727f8d2a685.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ExamServer/controller/ExamInfoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ExamServer/controller/UserinfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ExamServer/controller/UserinfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ExamServer/model/Userinfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ExamServer/model/Userinfo.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -140,7 +137,17 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand />
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@6c6767" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@6c6767" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@65b3c8a0" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+          </expand>
           <select />
         </treeState>
       </serviceView>
@@ -171,7 +178,9 @@
       <workItem from="1566891895664" duration="2794000" />
       <workItem from="1566896538465" duration="4790000" />
       <workItem from="1566977539439" duration="537000" />
-      <workItem from="1567048513379" duration="904000" />
+      <workItem from="1567048513379" duration="4697000" />
+      <workItem from="1567069688479" duration="421000" />
+      <workItem from="1567392907169" duration="3472000" />
     </task>
     <servers />
   </component>
