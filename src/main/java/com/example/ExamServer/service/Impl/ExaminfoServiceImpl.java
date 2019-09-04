@@ -1,10 +1,8 @@
 package com.example.ExamServer.service.Impl;
 
-import com.example.ExamServer.dao.ExaminfoMapper;
-import com.example.ExamServer.dao.ExamGroupMapper;
-import com.example.ExamServer.dao.GroupUserMapper;
-import com.example.ExamServer.dao.UserinfoMapper;
+import com.example.ExamServer.dao.*;
 import com.example.ExamServer.model.Examinfo;
+import com.example.ExamServer.model.Groupinfo;
 import com.example.ExamServer.model.Userinfo;
 import com.example.ExamServer.model.entity.ResponseEntity;
 import com.example.ExamServer.service.IExaminfoService;
@@ -34,20 +32,6 @@ public class ExaminfoServiceImpl implements IExaminfoService {
     @Override
     public ResponseEntity checkUserExam(String username) {
         ResponseEntity responseEntity=new ResponseEntity();
-        Userinfo user=userinfoMapper.selectByUsername(userinfo.getUserName());
-        if(user!=null){
-            responseEntity.setStatus(-1);
-            responseEntity.setMsg("该用户已存在");
-        }else{
-            int res=userinfoMapper.insert(userinfo);
-            if(res<0){
-                responseEntity.setStatus(-1);
-                responseEntity.setMsg("添加失败");
-            }else{
-                responseEntity.setStatus(200);
-                responseEntity.setMsg("添加成功");
-            }
-        }
         return responseEntity;
     }
 }

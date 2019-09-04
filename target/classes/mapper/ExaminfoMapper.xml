@@ -8,6 +8,9 @@
     <result column="begin_time" jdbcType="VARCHAR" property="beginTime" />
     <result column="end_time" jdbcType="VARCHAR" property="endTime" />
     <result column="duration" jdbcType="INTEGER" property="duration" />
+    <association property="id" jdbcType="INTEGER"
+                 select="xxx.dao.xxxDao.getBySource"
+                 column="{sourceTarget=id,sourceType=cmdb_type}"/>
   </resultMap>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from examinfo
@@ -38,5 +41,10 @@
   <select id="selectAll" resultMap="BaseResultMap">
     select id, exam_name, paper_code, begin_time, end_time, duration
     from examinfo
+  </select>
+  <select id="selectByUserID" resultMap="BaseResultMap">
+    select id, exam_name, paper_code, begin_time, end_time, duration
+    from examinfo
+    where id = #{id}
   </select>
 </mapper>

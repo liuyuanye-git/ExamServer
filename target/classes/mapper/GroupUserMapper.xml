@@ -13,4 +13,6 @@
     select group_id, user_id
     from group_user
   </select>
+  <!-->根据用户id获取用户组id<-->
+  <select id="getGroupIDbyUserID" parameterType=""
 </mapper>
