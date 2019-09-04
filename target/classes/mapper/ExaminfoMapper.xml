@@ -42,9 +42,4 @@
     select id, exam_name, paper_code, begin_time, end_time, duration
     from examinfo
   </select>
-  <select id="selectByUserID" resultMap="BaseResultMap">
-    select id, exam_name, paper_code, begin_time, end_time, duration
-    from examinfo
-    where id = #{id}
-  </select>
 </mapper>
