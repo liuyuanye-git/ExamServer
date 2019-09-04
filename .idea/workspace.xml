@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="273e838a-4f8a-4ff3-a55e-5c52df0e45e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Mapper/GroupUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Mapper/GroupUserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/GroupUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/GroupUserMapper.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -184,7 +186,7 @@
       <workItem from="1567392907169" duration="8797000" />
       <workItem from="1567474324063" duration="769000" />
       <workItem from="1567566737533" duration="318000" />
-      <workItem from="1567572137895" duration="3124000" />
+      <workItem from="1567572137895" duration="5470000" />
     </task>
     <servers />
   </component>
