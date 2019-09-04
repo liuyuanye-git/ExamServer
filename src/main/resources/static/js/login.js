@@ -3,13 +3,18 @@
  */
 $(function(){
 
+    var test={
+        
+        groupName:"hah"
+    };
 
     $.ajax({
-        url: "/groupuser/info",
-        type: "Get",
+        url: "/groupinfo",
+        type: "post",
         traditional: true,
-        contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+        contentType: "application/json; charset=UTF-8",
         dataType: "json",
+        data:JSON.stringify(test),
         success: function (data) {
            console.log(data);
         },

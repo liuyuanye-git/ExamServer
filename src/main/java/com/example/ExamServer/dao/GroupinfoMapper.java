@@ -12,11 +12,21 @@ import java.util.List;
 public interface GroupinfoMapper {
     int deleteByPrimaryKey(Integer id);
 
-    int insert(Groupinfo record);
 
     Groupinfo selectByPrimaryKey(Integer id);
 
     List<Groupinfo> selectAll();
 
     int updateByPrimaryKey(Groupinfo record);
+
+
+    /**
+     * 插入组信息
+     * @param record
+     * @return
+     */
+    int insert(Groupinfo record);
+
+    Groupinfo selectByGroupName(String groupName);
+
 }

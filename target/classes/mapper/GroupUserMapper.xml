@@ -16,6 +16,8 @@
 
 
 
+
+    <!--组+用户信息-->
     <resultMap id="groupUserInfo" type="com.example.ExamServer.model.entity.GroupUserInfo">
         <id column="group_id" property="group_id" jdbcType="INTEGER" />
         <result column="group_name" property="group_name" jdbcType="VARCHAR" />
@@ -24,8 +26,7 @@
           <result column="user_name" property="user_name"></result>
         </collection>
     </resultMap>
-
-
+    <!--获取组+用户所有信息-->
     <select id="selectGroupUserInfo" resultMap="groupUserInfo">
         SELECT g.id group_id,g.group_name group_name,u.id id,u.user_name
         FROM groupinfo g
