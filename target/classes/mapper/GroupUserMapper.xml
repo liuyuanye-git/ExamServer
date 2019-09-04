@@ -28,8 +28,9 @@
 
     <select id="selectGroupUserInfo" resultMap="groupUserInfo">
         SELECT g.id group_id,g.group_name group_name,u.id id,u.user_name
-        FROM groupinfo g,userinfo u,group_user gu
-        WHERE g.id=gu.group_id AND gu.user_id=u.id
+        FROM groupinfo g
+        LEFT JOIN  group_user gu on g.id=gu.group_id
+        LEFT JOIN userinfo u on gu.user_id=u.id
     </select>
 
 
