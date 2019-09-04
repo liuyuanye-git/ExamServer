@@ -45,4 +45,10 @@ public class UserinfoController {
         return responseEntity;
     }
 
+//    @PostMapping("/login")
+//    public ResponseEntity userLogin(@RequestBody Userinfo userinfo) {
+//        ResponseEntity responseEntity = iUserinfoService.selectUser(userinfo.getUserName(), userinfo.getPassword());
+//        return responseEntity;
+//    }
+
 }
