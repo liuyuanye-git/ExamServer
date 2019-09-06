@@ -15,6 +15,8 @@ public interface ExaminfoMapper {
 
     Examinfo selectByPrimaryKey(Integer id);
 
+    Examinfo getExambyUser(Integer userId);
+
     List<Examinfo> selectAll();
 
     int updateByPrimaryKey(Examinfo record);

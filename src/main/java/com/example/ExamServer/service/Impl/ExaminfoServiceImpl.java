@@ -34,4 +34,14 @@ public class ExaminfoServiceImpl implements IExaminfoService {
         ResponseEntity responseEntity=new ResponseEntity();
         return responseEntity;
     }
+
+
+    public ResponseEntity userCheckExam(int userId) {
+        ResponseEntity responseEntity = new ResponseEntity();
+        Examinfo examinfo = examinfoMapper.getExambyUser(userId);
+        responseEntity.setData(examinfo);
+        responseEntity.setMsg("查询成功");
+        responseEntity.setStatus(200);
+        return  responseEntity;
+    }
 }
