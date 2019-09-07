@@ -27,20 +27,4 @@
     select id, group_name
     from groupinfo
   </select>
-
-
-  <!--新建组,设置主键自增-->
-    insert into groupinfo (id, group_name)
-    values (#{id,jdbcType=INTEGER}, #{groupName,jdbcType=VARCHAR})
-  </insert>
-
-    <!--根据组名查找组-->
-    <select id="selectByGroupName" parameterType="java.lang.String" resultMap="BaseResultMap">
-        select id, group_name
-        from groupinfo
-        where group_name = #{groupName}
-    </select>
-
-
-
 </mapper>
