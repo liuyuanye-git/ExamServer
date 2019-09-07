@@ -9,7 +9,10 @@
     delete from groupinfo
     where id = #{id,jdbcType=INTEGER}
   </delete>
-
+  <insert id="insert" parameterType="com.example.ExamServer.model.Groupinfo">
+    insert into groupinfo (id, group_name)
+    values (#{id,jdbcType=INTEGER}, #{groupName,jdbcType=VARCHAR})
+  </insert>
   <update id="updateByPrimaryKey" parameterType="com.example.ExamServer.model.Groupinfo">
     update groupinfo
     set group_name = #{groupName,jdbcType=VARCHAR}
@@ -26,9 +29,7 @@
   </select>
 
 
-
   <!--新建组,设置主键自增-->
-  <insert id="insert"  useGeneratedKeys="true" keyProperty="id" parameterType="com.example.ExamServer.model.Groupinfo">
     insert into groupinfo (id, group_name)
     values (#{id,jdbcType=INTEGER}, #{groupName,jdbcType=VARCHAR})
   </insert>
