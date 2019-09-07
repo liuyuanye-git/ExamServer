@@ -15,7 +15,6 @@
   </select>
 
 
-
     <resultMap id="groupUserInfo" type="com.example.ExamServer.model.entity.GroupUserInfo">
         <id column="group_id" property="group_id" jdbcType="INTEGER" />
         <result column="group_name" property="group_name" jdbcType="VARCHAR" />

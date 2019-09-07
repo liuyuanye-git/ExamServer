@@ -44,6 +44,13 @@
     where user_name = #{username,jdbcType=VARCHAR}
   </select>
 
+  <!--获取所有考生列表-->
+  <select id="selectAllStudent" resultMap="BaseResultMap">
+    select id, user_name, `password`, user_type
+    from userinfo
+    where user_type = 'student'
+  </select>
+
   <update id="alterUserinfoable">
     ALTER TABLE userinfo AUTO_INCREMENT =1
   </update>

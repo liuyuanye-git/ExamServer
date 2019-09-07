@@ -1,6 +1,7 @@
 package com.example.ExamServer.dao;
 
 import com.example.ExamServer.model.Userinfo;
+import org.apache.catalina.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
@@ -35,4 +36,9 @@ public interface UserinfoMapper {
      * @return
      */
     Userinfo selectByUsername(String username);
+
+    /**
+     * 获取所有考生列表
+     */
+    Userinfo selectAllStudent();
 }

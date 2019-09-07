@@ -42,9 +42,4 @@
     select id, exam_name, paper_code, begin_time, end_time, duration
     from examinfo
   </select>
-  <select id="getExambyUser" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select exam_name, paper_code, begin_time, end_time, duration
-    where id in(select exam_id from exam_group,group_user where
-        exam_group.group.id=group_user.group_id and user_id = #{userId, jdbcType=INTEGER})
-  </select>
 </mapper>
