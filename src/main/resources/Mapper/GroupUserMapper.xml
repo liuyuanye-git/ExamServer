@@ -15,8 +15,6 @@
   </select>
 
 
-
-
     <!--组+用户信息-->
     <resultMap id="groupUserInfo" type="com.example.ExamServer.model.entity.GroupUserInfo">
         <id column="group_id" property="group_id" jdbcType="INTEGER" />

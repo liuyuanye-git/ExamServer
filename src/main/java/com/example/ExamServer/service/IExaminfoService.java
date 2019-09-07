@@ -13,4 +13,6 @@ public interface IExaminfoService {
      * @return
      */
     ResponseEntity checkUserExam(String username);
+
+    ResponseEntity userCheckExam(int userId);
 }
