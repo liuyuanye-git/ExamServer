@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Map;
+
 /**
  * Created by twinkleStar on 2019/9/4.
  */
@@ -23,6 +25,13 @@ public class GroupinfoController {
     @PostMapping
     public ResponseEntity addSingleUser(@RequestBody Groupinfo groupinfo) {
         ResponseEntity responseEntity=iGroupinfoService.addGroupinfo(groupinfo);
+        return responseEntity;
+    }
+
+
+    @PostMapping("/userid")
+    public ResponseEntity getGroupByUserId(@RequestBody Map<String,Integer> map) {
+        ResponseEntity responseEntity=iGroupinfoService.getGroupByUserId(map.get("id"));
         return responseEntity;
     }
 }

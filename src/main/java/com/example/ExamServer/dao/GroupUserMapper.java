@@ -11,9 +11,23 @@ import java.util.List;
 @Mapper
 @Repository
 public interface GroupUserMapper {
-    int insert(GroupUser record);
 
     List<GroupUser> selectAll();
 
+    /**
+     * 获取组+成员信息
+     * @return
+     */
     List<GroupUserInfo> selectGroupUserInfo();
+
+
+    GroupUserInfo selectGroupUserByGid(Integer groupId);
+
+    /**
+     * 插入组内成员
+     * @param record
+     * @return
+     */
+    int insert(GroupUser record);
+
 }

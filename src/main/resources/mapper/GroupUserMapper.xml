@@ -5,10 +5,7 @@
     <result column="group_id" jdbcType="INTEGER" property="groupId" />
     <result column="user_id" jdbcType="INTEGER" property="userId" />
   </resultMap>
-  <insert id="insert" parameterType="com.example.ExamServer.model.GroupUser">
-    insert into group_user (group_id, user_id)
-    values (#{groupId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER})
-  </insert>
+
   <select id="selectAll" resultMap="BaseResultMap">
     select group_id, user_id
     from group_user
@@ -34,5 +31,18 @@
         LEFT JOIN userinfo u on gu.user_id=u.id
     </select>
 
+    <!--向组内添加学生-->
+    <insert id="insert" parameterType="com.example.ExamServer.model.GroupUser">
+        insert into group_user (group_id, user_id)
+        values (#{groupId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER})
+    </insert>
+
+    <select id="selectGroupUserByGid" parameterType="java.lang.Integer" resultMap="groupUserInfo">
+        SELECT g.id group_id,g.group_name group_name,u.id id,u.user_name
+        FROM groupinfo g
+        LEFT JOIN  group_user gu on g.id=gu.group_id
+        LEFT JOIN userinfo u on gu.user_id=u.id
+        where g.id=#{groupId}
+    </select>
 
 </mapper>

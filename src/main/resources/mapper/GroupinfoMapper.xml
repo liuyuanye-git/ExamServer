@@ -40,6 +40,13 @@
         where group_name = #{groupName}
     </select>
 
-
+  <!--根据组名查找组-->
+  <select id="selectByUserId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select g.id id, g.group_name group_name
+    from groupinfo g
+    left join group_user gu on g.id=gu.group_id
+    left join userinfo u on gu.user_id=u.id
+    where u.id = #{userId}
+  </select>
 
 </mapper>

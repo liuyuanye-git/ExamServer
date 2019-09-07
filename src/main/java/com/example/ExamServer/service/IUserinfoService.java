@@ -13,7 +13,7 @@ public interface IUserinfoService {
      * @param userinfo
      * @return
      */
-    ResponseEntity addNewUser(Userinfo userinfo);
+    ResponseEntity addNewUsers(String[] name, int[] password);
 
     /**
      * 根据用户名、密码查询单个用户

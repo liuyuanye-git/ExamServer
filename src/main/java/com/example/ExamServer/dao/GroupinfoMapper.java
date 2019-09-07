@@ -29,4 +29,7 @@ public interface GroupinfoMapper {
 
     Groupinfo selectByGroupName(String groupName);
 
+
+    Groupinfo selectByUserId(Integer userId);
+
 }

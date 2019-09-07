@@ -35,4 +35,7 @@ public interface UserinfoMapper {
      * @return
      */
     Userinfo selectByUsername(String username);
+
+
+    List<String> selectTest();
 }

@@ -9,4 +9,6 @@ import com.example.ExamServer.model.entity.ResponseEntity;
 public interface IGroupinfoService {
 
     ResponseEntity addGroupinfo(Groupinfo groupinfo);
+
+    ResponseEntity getGroupByUserId(int userId);
 }
