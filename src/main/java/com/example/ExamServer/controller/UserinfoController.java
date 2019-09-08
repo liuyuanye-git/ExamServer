@@ -41,8 +41,10 @@ public class UserinfoController {
     @Autowired
     IUserinfoService iUserinfoService;
 
+
     @Autowired
     ExcelUtil excelUtil;
+
 
 
     /**
@@ -158,4 +160,9 @@ public class UserinfoController {
     }
 
 
+    @PostMapping("/check-student")
+    public ResponseEntity checkStudent() {
+        ResponseEntity responseEntity = iUserinfoService.selectAllStudent();
+        return responseEntity;
+    }
 }

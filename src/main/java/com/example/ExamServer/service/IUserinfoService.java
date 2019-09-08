@@ -23,7 +23,6 @@ public interface IUserinfoService {
      */
     ResponseEntity selectUser(String username, String password);
 
-
     /**
      * 仅测试
      * @param username
@@ -31,4 +30,9 @@ public interface IUserinfoService {
      * @return
      */
     String selectUserTest(String username, String password);
+
+    /**
+     * 获取所有考生列表
+     */
+    ResponseEntity selectAllStudent();
 }
