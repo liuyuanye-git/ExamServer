@@ -1,33 +1,20 @@
 package com.example.ExamServer.controller;
 
-import com.example.ExamServer.dao.UserinfoMapper;
-import com.example.ExamServer.model.Userinfo;
 import com.example.ExamServer.model.entity.ResponseEntity;
 import com.example.ExamServer.service.IUserinfoService;
-
 import com.example.ExamServer.util.ExcelUtil;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.hssf.usermodel.examples.CellTypes;
-import org.apache.poi.ss.format.CellFormatType;
 import org.apache.poi.ss.usermodel.*;
-import org.apache.tomcat.util.http.fileupload.disk.DiskFileItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.commons.CommonsMultipartFile;
-
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+
 import java.util.Map;
 
 
