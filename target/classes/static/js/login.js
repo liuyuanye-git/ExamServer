@@ -2,7 +2,7 @@
  * Created by lenovo on 2019/8/26.
  */
 $(function(){
-
+    window.location.href="/userinfo/template";
     var test1=new Array;
 
    test1[0]=1;
