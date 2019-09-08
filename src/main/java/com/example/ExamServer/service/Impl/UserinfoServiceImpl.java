@@ -7,6 +7,8 @@ import com.example.ExamServer.service.IUserinfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * Created by twinkleStar on 2019/8/26.
  */
@@ -76,8 +78,23 @@ public class UserinfoServiceImpl implements IUserinfoService {
         return responseEntity;
     }
 
+    /**
+     * 获取所有考生用户列表
+     */
+    public ResponseEntity selectAllStudent() {
+        List<Userinfo> StudentList = (List<Userinfo>) userinfoMapper.selectAllStudent();
+        ResponseEntity responseEntity = new ResponseEntity();
+        if(StudentList == null || StudentList.size() ==0) {
+            responseEntity.setStatus(-1);
+            responseEntity.setMsg("没有考生信息");
+        } else {
+            responseEntity.setStatus(200);
+            responseEntity.setMsg("查询成功");
+            responseEntity.setData(StudentList);
+        }
 
-
+        return  responseEntity;
+    }
 
     /**
      * 仅测试
@@ -86,7 +103,7 @@ public class UserinfoServiceImpl implements IUserinfoService {
      * @return
      */
     public String selectUserTest(String username,String password){
-
         return "valid";
     }
+
 }

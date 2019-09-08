@@ -34,7 +34,6 @@ public class UserinfoController {
     @Autowired
     IUserinfoService iUserinfoService;
 
-
     /**
      * 单个用户注册
      * @param userinfo
@@ -111,4 +110,9 @@ public class UserinfoController {
 
 
 
+    @PostMapping("/check-student")
+    public ResponseEntity checkStudent() {
+        ResponseEntity responseEntity = iUserinfoService.selectAllStudent();
+        return responseEntity;
+    }
 }
