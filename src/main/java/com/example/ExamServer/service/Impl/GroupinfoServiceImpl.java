@@ -42,4 +42,21 @@ public class GroupinfoServiceImpl implements IGroupinfoService {
         }
 
     }
+
+
+    public ResponseEntity getGroupByUserId(int userId){
+        ResponseEntity responseEntity=new ResponseEntity();
+        Groupinfo groupinfo=groupinfoMapper.selectByUserId(userId);
+        if (groupinfo != null) {
+
+            responseEntity.setStatus(200);
+            responseEntity.setMsg("查询成功");
+            responseEntity.setData(groupinfo);
+        }else{
+            responseEntity.setStatus(-1);
+            responseEntity.setMsg("该用户不属于任何一个组");
+        }
+
+        return responseEntity;
+    }
 }

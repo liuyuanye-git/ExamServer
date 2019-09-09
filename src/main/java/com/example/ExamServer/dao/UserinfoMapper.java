@@ -37,8 +37,6 @@ public interface UserinfoMapper {
      */
     Userinfo selectByUsername(String username);
 
-    /**
-     * 获取所有考生列表
-     */
-    Userinfo selectAllStudent();
+
+    List<String> selectTest();
 }

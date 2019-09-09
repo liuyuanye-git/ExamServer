@@ -2,14 +2,20 @@
  * Created by lenovo on 2019/8/26.
  */
 $(function(){
+    window.location.href="/userinfo/template";
+    var test1=new Array;
 
+   test1[0]=1;
+   test1[1]=2;
+   test1[2]=3;
+
+    console.log(test1);
     var test={
-        
-        groupName:"hah"
+        id:2
     };
 
     $.ajax({
-        url: "/groupinfo",
+        url: "/groupuser/info",
         type: "post",
         traditional: true,
         contentType: "application/json; charset=UTF-8",

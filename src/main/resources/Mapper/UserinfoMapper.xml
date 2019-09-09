@@ -55,4 +55,12 @@
     ALTER TABLE userinfo AUTO_INCREMENT =1
   </update>
 
+
+
+  <select id="selectTest" resultType="java.lang.String">
+    select user_name from userinfo
+  </select>
+
+
+
 </mapper>

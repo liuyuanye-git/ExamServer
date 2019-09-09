@@ -20,23 +20,34 @@ public class UserinfoServiceImpl implements IUserinfoService {
 
     /**
      * 添加单个用户
-     * @param userinfo
+     * @param
      * @return
      */
-    public ResponseEntity addNewUser(Userinfo userinfo){
+    public ResponseEntity addNewUsers(String[] name, int[] password){
+
         ResponseEntity responseEntity=new ResponseEntity();
-        Userinfo user=userinfoMapper.selectByUsername(userinfo.getUserName());
-        if(user!=null){
-            responseEntity.setStatus(-1);
-            responseEntity.setMsg("该用户已存在");
-        }else{
-            int res=userinfoMapper.insert(userinfo);
-            if(res<0){
+        int res=0;
+        for(int i=0;i<name.length;i++){
+            Userinfo userinfo=new Userinfo();
+            userinfo.setUserType("student");
+            userinfo.setUserName(name[i]);
+            userinfo.setPassword(password[i]+"");
+            Userinfo user=userinfoMapper.selectByUsername(userinfo.getUserName());
+            if(user!=null){
                 responseEntity.setStatus(-1);
-                responseEntity.setMsg("添加失败");
+                responseEntity.setMsg("该用户已存在");
+                return responseEntity;
             }else{
-                responseEntity.setStatus(200);
-                responseEntity.setMsg("添加成功");
+                 res=userinfoMapper.insert(userinfo);
+
+                if(res<0){
+                    responseEntity.setStatus(-1);
+                    responseEntity.setMsg("添加失败");
+                    return responseEntity;
+                }else{
+                    responseEntity.setStatus(200);
+                    responseEntity.setMsg("添加成功");
+                }
             }
         }
 
